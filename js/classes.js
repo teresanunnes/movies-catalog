@@ -44,7 +44,7 @@ class Filme{
         let divAnoProducao = document.createElement("div");
         divAnoProducao.setAttribute("style", "flex-grow:1;");
         let divClassificacao = document.createElement("div");
-        divAnoProducao.setAttribute("style", "flex-grow:1;");
+        divClassificacao.setAttribute("style", "flex-grow:1;");
         hCardTitle.appendChild(document.createTextNode(this.titulo));
         divGenero.appendChild(document.createTextNode(this.genero));
         divAnoProducao.appendChild(document.createTextNode(this.ano));
@@ -61,5 +61,16 @@ class Filme{
         cardBody.appendChild(this.getBtnDetalhes());
         
         return card;
+    }
+
+    setBtnDetalhes=() =>{
+        this.btnDetalhes = document.createElement("button");
+        this.btnDetalhes.appendChild(document.createTextNode("Detalhes"));
+        this.btnDetalhes.setAttribute("id", this.id);
+        this.btnDetalhes.setAttribute("class","btnDetalhesFilme");
+    }
+
+    getBtnDetalhes= () =>{
+        return this.btnDetalhes;
     }
 }

@@ -14,7 +14,7 @@ btnSearchMovie.onclick = async () => {
   if (inputSearchMovie.value.length > 0) {
     const movies = new Array();
 
-    fetch("http://www.omdbapi.com/?apikey=ed5e5ad5&s=" + inputSearchMovie.value, { mode:"cors" })
+    fetch("http://www.omdbapi.com/?apikey=ed5e5ad5&s=" + inputSearchMovie.value)
       .then((res) => res.json())
       .then((res) => {
         res.Search.forEach((item) => {
